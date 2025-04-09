@@ -11,6 +11,11 @@ function createGrid()
         let square = document.createElement("div");
         square.className = "square";
         gridContainer.appendChild(square);
+
+        // Create hovering effect for each created square.
+        square.addEventListener("mouseover", () => {
+            square.style = "background-color: gold";
+        })
     }
 
     return gridContainer;
