@@ -1,28 +1,62 @@
-* 
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
 {
     box-sizing: border-box;
     background-color:lightslategray;
+
+    margin: 0;
+    padding: 0;
 }
 
-.container
+.wrapper
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 30px;
+    margin-bottom: 30px
+}
+
+.wrapper > .button-delete
+{
+    background-color: orange;
+    padding: 3px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.sketch-screen
 {
     display:flex;
-    flex-wrap: wrap;
     justify-content: center;
-    margin-top: 100px;
+    
 }
 
-.container > .square
+.sketch-screen > .column
 {
     border: 2px solid black;
+    border-top: 0;
+    border-bottom: 0;
     background-color: steelblue;
-    height: 40px;
+    
+    height: auto;
     width: 40px;
 }
 
-.container > .square:nth-child(16n + 1)
+.sketch-screen > .column > .row
 {
-    width: 100%;
-    border: 0;
-    height: 0;
+    border: 2px solid black;
+    border-left: 0;
+    border-right: 0;
+    display: flex;
+    flex-direction: row;
+
+    height: 40px;
+    width: auto;
 }
