@@ -59,8 +59,11 @@ function createGrid(gridSize)
             squareColumn.appendChild(squareRow);
 
             // Create hovering effect for each created square.
+            // EC: Add RGB Effect
             squareRow.addEventListener("mouseover", () => {
-                squareRow.style = "background-color: gold";
+                squareRow.style.backgroundColor = "rgb(" + Math.floor(Math.random() * 255) + ","
+                                                + Math.floor(Math.random() * 255) + ","
+                                                + Math.floor(Math.random() * 255) + ")";
             })
         }
         gridContainer.appendChild(squareColumn);
