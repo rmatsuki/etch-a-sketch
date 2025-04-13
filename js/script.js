@@ -68,10 +68,13 @@ function createGrid(gridSize)
                 if (tileOpacity <= 1)
                 {
                     squareRow.style.backgroundColor = "rgb(" + Math.floor(Math.random() * 255) + ","
-                                                    + Math.floor(Math.random() * 255) + ","
-                                                    + Math.floor(Math.random() * 255) + ")";
+                                                             + Math.floor(Math.random() * 255) + ","
+                                                             + Math.floor(Math.random() * 255) + ")";
                     tileOpacity += 0.1;
-                    console.log(`tileOpacity: ${tileOpacity}`);
+                    //// Uncomment below to print index number on each tile. Use for debugging.
+                    //console.log(`tileOpacity: ${tileOpacity}`);
+                    
+                    // Set tile opacity to newly incremented value.
                     squareRow.style.opacity = `${tileOpacity}`;
                 }
                 else
@@ -81,6 +84,7 @@ function createGrid(gridSize)
                 }
             })
         }
+        // Append columns and containers.
         gridContainer.appendChild(squareColumn);
         gridWrapper.appendChild(gridContainer);
     }
