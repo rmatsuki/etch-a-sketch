@@ -18,10 +18,12 @@ function deleteBtnEvent(gridContainer, deleteButton)
         }
         else if (gridSize === null)
         {
+            // Print null in alert if gridSize is null.
             window.alert("-=NULL=-");
         }
         else
         {
+            // If input is NOT within 1-100r integer range, tell user to try again. 
             window.alert("Invalid input. Please try again.");
         }
     });
@@ -48,6 +50,8 @@ function createGrid(gridSize)
     gridWrapper.classList.add("grid-wrapper");
     const gridContainer = document.createElement("div");
     gridContainer.className = "screen";
+
+    // Create the grid using columns and rows.
     for (let i = 0; i < gridSize; i++)
     {
         let squareColumn = document.createElement("div");
