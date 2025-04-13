@@ -8,9 +8,19 @@ body
 {
     box-sizing: border-box;
     background-color:lightslategray;
+}
 
-    margin: 0;
-    padding: 0;
+h1
+{
+    display: flex;
+    justify-content: center;
+
+    font-size: 35px;
+    font-style: italic;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color:darkslateblue;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .wrapper
@@ -20,43 +30,47 @@ body
     align-items: center;
 
     margin-top: 30px;
-    margin-bottom: 30px
+    margin-bottom: 30px;
+    width: auto;
 }
 
 .wrapper > .button-delete
 {
-    background-color: orange;
+    background-color:salmon;
     padding: 3px;
     font-weight: bold;
     font-style: italic;
+    border-radius: 5px;
 }
 
-.sketch-screen
+.grid-wrapper
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.screen
 {
     display:flex;
-    justify-content: center;
-    
+    width: 600px;
+    height: 600px;
+
 }
 
-.sketch-screen > .column
+.screen > .column
 {
-    border: 2px solid black;
-    border-top: 0;
-    border-bottom: 0;
-    background-color: steelblue;
-    
-    height: auto;
-    width: 40px;
-}
-
-.sketch-screen > .column > .row
-{
-    border: 2px solid black;
-    border-left: 0;
-    border-right: 0;
     display: flex;
-    flex-direction: row;
+    flex-grow: 1;
+    flex-direction: column;
 
-    height: 40px;
-    width: auto;
+    border: .5px solid black;
+    background-color: steelblue;
+}
+
+.screen > .column > .row
+{
+    flex-grow: 1;
+    border: .5px solid black;
 }
